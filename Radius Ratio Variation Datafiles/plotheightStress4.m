@@ -21,7 +21,7 @@ radiusRatio_array_exp = [0.05 0.1 0.15 0.3 0.35 0.4:0.1:1];
 height_exp = [0.3855 0.3873 0.3982 0.3476 0.3388 0.3148 0.2827 0.2506 0.1932 0.1482 0.1082 0.0703];
 plot(radiusRatio_array,height*1e3/110,"-*");
 hold on
-plot(radiusRatio_array_exp,height_exp,"*");
+plot(radiusRatio_array_exp,height_exp,"o");
 ylabel("Normalized Height H/2R")
 xlabel("Radius Ratio")
 ylim([0 1])
