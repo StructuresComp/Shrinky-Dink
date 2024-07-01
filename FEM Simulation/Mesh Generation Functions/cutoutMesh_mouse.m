@@ -10,7 +10,7 @@ center = mean(gm.Vertices);
 translate(gm,[-center(1),-center(2)])
 figure(2)
 FEMesh = generateMesh(model,"Hedge",{1:36,0.0001});
-pdemesh(FEMesh,"NodeLabels","on")
+pdemesh(FEMesh)
 hold on
 cutOutElements = findElements(FEMesh,'region','Face',1); % Define the kirigiami elements
 pdemesh(FEMesh.Nodes, FEMesh.Elements(:,cutOutElements),'EdgeColor','green');

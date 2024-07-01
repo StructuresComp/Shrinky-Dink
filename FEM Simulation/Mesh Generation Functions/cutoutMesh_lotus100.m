@@ -11,13 +11,13 @@ geometryFromEdges(model,g);
 %% Plot the geometry (for simple check)
 
 figure(1);
-pdegplot(model,'VertexLabels','on')
+pdegplot(model,'FaceLabels','on')
 axis equal
 
 
 %% Mesh it
 FEMesh = generateMesh(model,'Hmax', maxMeshSize, 'Hmin', ...
-    minMeshSize);
+    minMeshSize);s
 %% Identify which region is the main circular part
 cutOutElements_kir = findElements(FEMesh,'region','Face', 1);
 figure(2);
