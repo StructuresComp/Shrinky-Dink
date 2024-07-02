@@ -112,7 +112,7 @@ yDesired = 0.0;
 dist = sqrt( (x2D_connected- xDesired).^2 + (y2D_connected - yDesired).^2 );
 [~, minInd] = min(dist);
 for i = 1: nLayers
-    fprintf(fid, '*Nset, nset=centerNode%d\n%d\n', i, minInd+num_nodes2D*(nlayers*i-1));
+    fprintf(fid, '*Nset, nset=centerNode%d\n%d\n', i, minInd+num_nodes2D*(nlayers*i));
 end
 
 
