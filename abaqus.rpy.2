@@ -1,0 +1,80 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 6.14-3 replay file
+# Internal Version: 2015_02_02-13.14.46 134785
+# Run by mrun21 on Mon Jul  8 10:47:04 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=395.078125, 
+    height=266.70556640625)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+o1 = session.openOdb(
+    name='/storage/mrun21/Research/Shrinky Shapes Parallel/New Folder/r-bi-shell.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /storage/mrun21/Research/Shrinky Shapes Parallel/New Folder/r-bi-shell.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       3
+#: Number of Node Sets:          3
+#: Number of Steps:              2
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.226882, 
+    farPlane=0.292943, width=0.175822, height=0.0878341, cameraPosition=(
+    -0.0394272, 0.037864, -0.24475), cameraUpVector=(-0.555973, 0.656957, 
+    0.509217), cameraTarget=(0.0066063, 0.0128941, 0.00434976))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.215027, 
+    farPlane=0.301258, width=0.166635, height=0.0832446, cameraPosition=(
+    -0.0377318, -0.109288, -0.215568), cameraUpVector=(-0.629539, 0.771165, 
+    0.0947916), cameraTarget=(0.00664131, 0.00985535, 0.00495239))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.216049, 
+    farPlane=0.311356, width=0.167427, height=0.0836402, cameraPosition=(
+    0.143746, -0.0460989, -0.20333), cameraUpVector=(-0.976276, -0.0781612, 
+    -0.201929), cameraTarget=(0.00917013, 0.0107359, 0.00512292))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.215633, 
+    farPlane=0.31617, width=0.167105, height=0.0834792, cameraPosition=(
+    0.217001, -0.00455043, -0.142327), cameraUpVector=(-0.813159, -0.262625, 
+    -0.519424), cameraTarget=(0.0117139, 0.0121786, 0.0072412))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.228468, 
+    farPlane=0.296315, width=0.177051, height=0.0884479, cameraPosition=(
+    0.0326535, -0.0386118, -0.245203), cameraUpVector=(-0.974477, 0.0412962, 
+    0.220655), cameraTarget=(0.0038407, 0.0107239, 0.00284752))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.21427, 
+    farPlane=0.314538, width=0.166048, height=0.0829512, cameraPosition=(
+    -0.059061, 0.264388, 0.0482748), cameraUpVector=(-0.825176, -0.560429, 
+    0.0707384), cameraTarget=(0.00109815, 0.0197845, 0.0116234))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.223499, 
+    farPlane=0.302992, width=0.1732, height=0.0865239, cameraPosition=(
+    -0.0647749, 0.072583, 0.257954), cameraUpVector=(-0.769631, -0.447901, 
+    -0.455031), cameraTarget=(0.000885101, 0.0126328, 0.0194416))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.226504, 
+    farPlane=0.300839, width=0.175529, height=0.0876874, cameraPosition=(
+    -0.0337421, 0.0813242, 0.262157), cameraUpVector=(-0.837075, -0.415789, 
+    -0.355563), cameraTarget=(0.0019107, 0.0129217, 0.0195805))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.234706, 
+    farPlane=0.292637, width=0.0495619, height=0.0247592, 
+    viewOffsetX=-0.00347777, viewOffsetY=0.00394272)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.217955, 
+    farPlane=0.307487, width=0.0460247, height=0.0229922, cameraPosition=(
+    0.135957, 0.139525, 0.193998), cameraUpVector=(-0.883427, -0.291246, 
+    0.367059), cameraTarget=(0.00667046, 0.0138816, 0.0142977), 
+    viewOffsetX=-0.00322956, viewOffsetY=0.00366133)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=0.21145, 
+    farPlane=0.311984, width=0.0446511, height=0.022306, cameraPosition=(
+    0.214418, 0.15549, 0.0447522), cameraUpVector=(-0.583455, 0.0454275, 
+    0.810874), cameraTarget=(0.00703875, 0.0124857, 0.00818396), 
+    viewOffsetX=-0.00313318, viewOffsetY=0.00355206)
+#: Warning: Unable to access output database file: '/storage/mrun21/Research/Shrinky Shapes Parallel/New Folder/r-bi-shell.odb'. Please check to see if the file exists and its permission settings.
