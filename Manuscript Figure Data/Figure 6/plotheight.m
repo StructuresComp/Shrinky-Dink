@@ -42,13 +42,13 @@ h1 = figure(1);
 
 plot(radiusRatio_array,norm_height_sim,"b*-",'DisplayName','Simulation','MarkerSize',1);
 hold on
-errorbar(0.5*(1-radiusRatio_array_exp.^2),norm_height_exp,error_norm_height_exp,"^",'DisplayName','Experiment',...
+errorbar(radiusRatio_array_exp,norm_height_exp,error_norm_height_exp,"^",'DisplayName','Experiment',...
     'MarkerSize',6,'LineWidth',1,'Color', colpos(1,:))
 
 ylabel("Normalized Height H/2R")
 xlabel("Radius Ratio")
-ylim([0 1])
+ylim([0 0.5])
 legend('Location','northeast',"FontSize",12)
 set(gcf, 'PaperUnits','inches', 'PaperPosition',[0 0 pWidth pHeight], ...
     'PaperSize', [pWidth pHeight]);
-% saveas(h1, "Parametric Variation Plot.pdf");
+saveas(h1, "Parametric Variation Plot.pdf");
