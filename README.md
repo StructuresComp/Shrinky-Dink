@@ -4,10 +4,8 @@
 
 <!-- Add description -->
 ## Description
-This repository contains the files used to simulate the soft kirigami structures in the paper "Design of bistable soft deployable structures via a Kirigami-inspired
-planar fabrication approach" by
-Mrunmayi Mungekar, Vishal Kackar, Shyan Shokrazadeh, Wenzhong Yan, Leixin Ma*, and
-Mohammad K. Jawed*.
+This repository contains the files used to simulate the soft kirigami structures in the paper "Directed Shape Morphing using Kirigami-enhanced Thermoplastics" by
+Mrunmayi Mungekar, Sanjith Menon, M. Ravi Shankar, and M. Khalid Jawed.
 
 <!-- Add table of contents -->
 ## Table of Contents
@@ -65,6 +63,9 @@ This code does not account for contact modelling. Hence, it is not designed for 
 <!-- Add contributing -->
 ## Contributing
 Feedback is welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+## Acknowledgments
+We acknowledge financial support from the National Science Foundation (grants: CMMI-2332555 and CMMI-2053971).
 
 <!-- License -->
 ## License
