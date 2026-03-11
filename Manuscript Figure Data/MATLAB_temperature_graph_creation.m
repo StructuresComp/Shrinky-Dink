@@ -1,3 +1,7 @@
+% Figure S1 (Supplementary Information) in the paper uses Bowl_1_4913.xlsx
+% to create the figure using this MATLAB script.
+% The .xlsx file (as well as temperature logging data for all the shapes)
+% are available in Shrinky-Dink/Manuscript Figure Data/.../Temperature Data
 %% Plotting Function
 ext = '*.xlsx';
 files = dir(ext);
@@ -18,7 +22,8 @@ dataTable = readtable(filename, 'TextType','string');
 dataTable.CH1 = extractBefore(dataTable.CH1,strlength(dataTable.CH1)-1);
 disp(dataTable.Properties.VariableNames);
 
-temperature = str2double(dataTable.CH1);
+temperatureF = str2double(dataTable.CH1);
+temperature = (temperatureF - 32) * 5 / 9;
 time_size = length(temperature);
 time = linspace(1, time_size, time_size);
 h1 = figure(1);
@@ -33,7 +38,7 @@ pHeight = 3;
 colpos = [247 148 30;0 166 81;237 28 36;0 174 239; 0 0 0]/255; % colors
 plot(time, temperature, '^', 'Color', colpos(1,:));
 %title(figureTitle, 'Fontname', FONT, 'FontSize', FONTSIZE);
-title(plotTitle, 'Fontname', FONT, 'FontSize', FONTSIZE);
+% title(plotTitle, 'Fontname', FONT, 'FontSize', FONTSIZE);
 xLine = [deformationTime, deformationTime]; % x-coordinates of the line
 yLimits = [0 max(temperature)+10]; % Get the y-axis limits of the current plot
 
@@ -42,7 +47,7 @@ line(xLine, yLimits, 'Color', 'r', 'LineStyle', '--', 'LineWidth', 2); % Red das
 line(meanplotx, meanploty, 'Color', 'b', 'LineStyle', '-', 'LineWidth', 1); % Red dashed line with thickness 2
 box on
 xlabel('Time After Placing in Oven, t (s)', 'Fontname', FONT, 'FontSize', FONTSIZE);
-ylabel(strcat('Temperature of Oven, T (', char(176), 'F)'), 'Fontname', FONT, 'FontSize', FONTSIZE);
+ylabel(strcat('Temperature of Oven, T (', char(176), 'C)'), 'Fontname', FONT, 'FontSize', FONTSIZE);
 AX = legend('Temperature','Start of Deformation', 'Mean Temperature', 'Location', 'SouthEast');
 LEG = findobj(AX,'type','text');
 ylim([0 inf])
